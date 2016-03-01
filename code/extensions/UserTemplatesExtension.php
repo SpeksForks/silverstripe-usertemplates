@@ -26,11 +26,11 @@ class UserTemplatesExtension extends DataExtension {
 		$effectiveMaster = $this->effectiveTemplate();
 		$effectiveLayout = $this->effectiveTemplate('Layout');
 
-		if($effectiveMaster){
+		if($effectiveMaster) {
 			$fields->addFieldToTab('Root.Theme', ReadonlyField::create('EffectiveMaster', 'Effective master template', $effectiveMaster->Title));
 		}
 
-		if($effectiveLayout){
+		if($effectiveLayout) {
 			$fields->addFieldToTab('Root.Theme', ReadonlyField::create('EffectiveLayout', 'Effective layout template', $effectiveLayout->Title));
 		}
 
